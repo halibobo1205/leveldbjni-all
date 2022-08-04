@@ -28,15 +28,18 @@ make libleveldb.a
 ```
 
 #Special for M1
-    brew install maven
-    set $JAVA_HOME
-    update pom.xml
+```shell script
+brew install maven
+set $JAVA_HOME
+update pom.xml
         1. 1.5 -> 1.8 
         2. add java_home, remove with-universal
             <arg>--with-jni-jdk=${env.JAVA_HOME}</arg>
             <arg>--with-leveldb=${env.LEVELDB_HOME}</arg>
             <arg>--with-snappy=${env.SNAPPY_HOME}</arg>
-            <!--<arg>&#45;&#45;with-universal</arg>-->
+            <!--<arg>--with-universal</arg>-->
+```
+    
 
 #Build jni
 ```shell
